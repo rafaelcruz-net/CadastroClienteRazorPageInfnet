@@ -1,0 +1,24 @@
+﻿@page
+@model CadastroCliente.Pages.Cliente.ListaModel
+@{
+}
+
+<table>
+
+    <tr>
+        <td>Nome</td>
+        <td>Email</td>
+        <td>CPF</td>
+        <td>Data de Nascimento</td>
+    </tr>
+
+    @foreach(var item in Model.Clientes)
+    {
+        <tr>
+            <td>@item.Nome</td>
+            <td>@item.Email</td>
+            <td>@item.CPF</td>
+            <td>@item.DtNascimento</td>
+        </tr>
+    }
+</table>
