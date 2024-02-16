@@ -20,13 +20,15 @@ namespace CadastroCliente.Pages.Cliente
         {
         }
 
-        public void OnPost() 
+        public IActionResult OnPost() 
         { 
             if (Cliente != null)
             {
                 this._context.Clientes.Add(Cliente);
                 this._context.SaveChanges();
             }
+
+            return RedirectToPage("Lista");
         
         }
     }
