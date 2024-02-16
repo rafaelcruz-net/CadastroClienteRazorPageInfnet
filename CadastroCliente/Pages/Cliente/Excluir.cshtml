@@ -1,0 +1,14 @@
+﻿@page "{id:int}"
+@model CadastroCliente.Pages.Cliente.ExcluirModel
+@{
+}
+
+<form method="post">
+    <input type="hidden" asp-for="Cliente.Id" />
+    <h3>
+        Deseja realmente excluir o cliente @Model.Cliente.Nome?
+    </h3>
+    <input type="submit" value="Confirmar!" />
+</form>
+
+

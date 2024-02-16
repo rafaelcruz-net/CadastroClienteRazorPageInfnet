@@ -10,6 +10,8 @@
         <td>Email</td>
         <td>CPF</td>
         <td>Data de Nascimento</td>
+        <td>Ação</td>
+
     </tr>
 
     @foreach(var item in Model.Clientes)
@@ -19,6 +21,15 @@
             <td>@item.Email</td>
             <td>@item.CPF</td>
             <td>@item.DtNascimento</td>
+            <td>
+                <a href="/Cliente/Editar/@item.Id">
+                    Editar cliente
+                </a>
+                <a href="/Cliente/Excluir/@item.Id">
+                    Excluir cliente
+                </a>
+
+            </td>
         </tr>
     }
 </table>

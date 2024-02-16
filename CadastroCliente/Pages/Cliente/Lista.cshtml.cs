@@ -12,7 +12,7 @@ namespace CadastroCliente.Pages.Cliente
         {
             _context = context;
         }
-
+        
         public void OnGet()
         {
             this.Clientes = this._context.Clientes.ToList();
